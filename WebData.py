@@ -135,13 +135,13 @@ if selected == "Place":
     st.title("Data Persentase Pengguna Rokok Di Indonesia")
     st.header('Berdasarkan Tempat Tinggal')
     
-    fig = px.bar(df_Tinggal, x='Tahun', y=['Kota', 'Desa'], 
+    bar_Tinggal = px.bar(df_Tinggal, x='Tahun', y=['Kota', 'Desa'], 
                  barmode='group', 
                  height=400)
 
-    fig.update_layout(title_text='Barchart untuk Persentase Kota dan Desa')
+    bar_Tinggal.update_layout(title_text='Barchart untuk Persentase Kota dan Desa')
 
-    st.plotly_chart(fig)
+    st.plotly_chart(bar_Tinggal)
     
     st.subheader("Data Tabel")
 
